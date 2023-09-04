@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  php:
+    build:
+      ./php
+      # Собирает образ для контейнера на основе Dockerfile, который находится в директории ./php.
+    volumes:
+      - ./:/var/www/html
+      # Монтирует текущую директорию хоста в /usr/src/myapp внутри контейнера.
+
+
+    # working_dir: /usr/src/myapp
+      # Устанавливает рабочую директорию внутри контейнера на /usr/src/myapp
+
+
+    # command: ["php", "./index.php"]
+      # По умолчанию запускает команду php ./index.php внутри контейнера при его старте.
